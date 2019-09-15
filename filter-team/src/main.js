@@ -5,6 +5,6 @@ Vue.config.productionTip = false
 
 window.renderFilter = (containerId, props) => {
   new Vue({
-    render: h => h(App, { props }),
+    render: h => h(App, { props })
   }).$mount(containerId)
 }
