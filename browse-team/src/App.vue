@@ -1,6 +1,6 @@
 <template>
   <div id="Browse-App">
-    <span>Browse Team</span>
+    <h3>Browse Team</h3>
   </div>
 </template>
 

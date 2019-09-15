@@ -1,6 +1,6 @@
 <template>
   <div id="Filter-App">
-    <span>Filter Team</span>
+    <h3>Filter Team</h3>
   </div>
 </template>
 

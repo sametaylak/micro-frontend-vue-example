@@ -3,8 +3,8 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-window.renderFilter = containerId => {
+window.renderFilter = (containerId, props) => {
   new Vue({
-    render: h => h(App),
+    render: h => h(App, { props }),
   }).$mount(containerId)
 }

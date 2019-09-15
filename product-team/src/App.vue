@@ -1,6 +1,6 @@
 <template>
   <div id="Product-Team">
-    <span id="Product-Team-Header">Product Team</span>
+    <h3 id="Product-Team-Header">Product Team</h3>
     <micro-frontend name="Filter" host="http://localhost:3002"/>
     <micro-frontend name="Browse" host="http://localhost:3001"/>
   </div>

@@ -4,32 +4,33 @@
 
 <script>
 export default {
-  name: 'ProductTeam',
+  name: 'MicroFrontend',
   props: [
     'name',
-    'host'
+    'host',
+    'extra'
   ],
   async mounted () {
-    const scriptId = `micro-frontend-script-${this.name}`;
+    const scriptId = `micro-frontend-script-${this.name}`
 
     if (document.getElementById(scriptId)) {
-      this.render();
-      return;
+      this.render()
+      return
     }
 
     const response = await fetch(`${this.host}/asset-manifest.json`)
     const manifest = await response.json()
 
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.crossOrigin = '';
-    script.src = `${this.host}/${manifest['app.js']}`;
-    script.onload = this.render;
-    document.head.appendChild(script);
+    const script = document.createElement('script')
+    script.id = scriptId
+    script.crossOrigin = ''
+    script.src = `${this.host}/${manifest['app.js']}`
+    script.onload = this.render
+    document.head.appendChild(script)
   },
   methods: {
     render () {
-      window[`render${this.name}`](`#${this.name}-container`)
+      window[`render${this.name}`](`#${this.name}-container`, this.extra)
     }
   }
 }
