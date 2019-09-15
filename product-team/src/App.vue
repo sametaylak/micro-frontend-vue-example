@@ -1,8 +1,8 @@
 <template>
   <div id="Product-Team">
     <span id="Product-Team-Header">Product Team</span>
-    <micro-frontend name="Filter" host="http://localhost:8082"/>
-    <micro-frontend name="Browse" host="http://localhost:8081"/>
+    <micro-frontend name="Filter" host="http://localhost:3002"/>
+    <micro-frontend name="Browse" host="http://localhost:3001"/>
   </div>
 </template>
 
